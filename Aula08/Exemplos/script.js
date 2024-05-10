@@ -1,128 +1,134 @@
-// //exemplo 01
-// let xicara1 = {
-//     cor: "branca",
-//     forma: "redonda",
-//     peso: 5,
-//     capacidade: 10
-// }
+//------------------------------------------------//
 
-// console.log(xicara1);
+//               Métodos e Classe                 //
 
-// //exemplo 02
-// let xicara2 = {
-//     cor: "branca",
-//     forma: "redonda",
-//     peso: 5,
-//     capacidade: 10
-// }
+//------------------------------------------------//
 
-// console.log(xicara2.cor);
-// console.log(xicara2.peso);
-// console.log(xicara2["forma"]);
-// console.log(xicara2["capacidade"]);
+//(Exemplos)
+let xicara1 = {
+    cor: "branca",
+    forma: "redonda",
+    peso: 5,
+    capacidade: 10
+}
 
-// //exemplo 03
-// let xicara3 = {
-//     cor: "branca",
-//     forma: "redonda",
-//     peso: 5,
-//     capacidade: 10
-// }
+console.log(xicara1);
 
-// xicara3.peso = 7;
-// xicara3["cor"] = "rosa";
+let xicara2 = {
+    cor: "branca",
+    forma: "redonda",
+    peso: 5,
+    capacidade: 10
+}
 
-// console.log(xicara3);
+console.log(xicara2.cor);
+console.log(xicara2.peso);
+console.log(xicara2["forma"]);
+console.log(xicara2["capacidade"]);
 
-// //exemplo 04
-// function xicara4(cor,forma,peso,capacidade){
-//     this.cor = cor;
-//     this.forma = forma;
-//     this.peso = peso;
-//     this.capacidade = capacidade;
-// }
+let xicara3 = {
+    cor: "branca",
+    forma: "redonda",
+    peso: 5,
+    capacidade: 10
+}
 
-// const xicara41 = new xicara4("branca","redonda",5,10);
-// console.log(xicara41);
+xicara3.peso = 7;
+xicara3["cor"] = "rosa";
 
-// //exemplo 05
-// function pessoa(nome,idade,rua){
-//     this.nome = nome;
-//     this.idade = idade;
-//     this.rua = rua;
-//     this.falar = function(){
-//         console.log("Olá, sou "+this.nome)
-//     }
-// }
+console.log(xicara3);
 
-// const pessoa1 = new pessoa("Kauã",25,"Eliseu Viscont");
-// pessoa1.falar();
+//------------------------------------------------//
 
-// //exemplo 06
+function xicara4(cor,forma,peso,capacidade){
+    this.cor = cor;
+    this.forma = forma;
+    this.peso = peso;
+    this.capacidade = capacidade;
+}
 
-// //uma função é um bloco de código escrito para
-// //realizar algum conjunto específico de tarefas
-// function somar(a,b){
-//     let soma = a + b;
-//     return soma;
-// }
-// console.log(somar(1,2));
+const xicara5 = new xicara4("branca","redonda",5,10);
+console.log(xicara5);
 
-// //um método é uma propriedade de um objeto
-// //que contém uma definição de função
-// let pessoa = {
-//     nome:"Mariana",
-//     idade: 25,
-//     informacoes: function(){
-//         return this.nome + " tem " + this.idade + " anos"
-//     }
-// }
-// console.log(pessoa.informacoes());
+function pessoa(nome,idade,rua){
+    this.nome = nome;
+    this.idade = idade;
+    this.rua = rua;
+    this.falar = function(){
+        console.log("Olá, meu nome é "+this.nome+" tenho "+this.idade+" anos e moro na rua "+this.rua)
+    }
+}
 
-// //exemplo 07
-// let texto = "Olá, Coder";
+const pessoa1 = new pessoa("Kauã",25,"Eliseu Viscont");
+pessoa1.falar();
 
-// //Propriedade: comprimento do texto.
-// console.log(texto.length);
-// //Método: Converter minúscula.
-// console.log(texto.toLowerCase());
-// //Método: Converter maiúscula.
-// console.log(texto.toUpperCase());
+//------------------------------------------------//
 
-// //exemplo 08
-// const pessoa = {
-//     nome:"Mariana",
-//     idade: 25
-// };
+//uma função é um bloco de código escrito para
+//realizar algum conjunto específico de tarefas
+function somar(a,b){
+    let soma = a + b;
+    return soma;
+}
+console.log(somar(1,2));
 
-// //retorna true
-// console.log("nome" in pessoa);
-// //retorna false
-// console.log("origem" in pessoa);
+// um método é uma propriedade de um objeto
+// que contém uma definição de função
+let pessoa = {
+    nome:"Mariana",
+    idade: 25,
+    informacoes: function(){
+        return this.nome + " tem " + this.idade + " anos"
+    }
+}
+console.log(pessoa.informacoes());
 
-// //exemplo 09
-// const pessoa = {
-//     nome:"Mariana",
-//     idade: 25    
-// };
+//------------------------------------------------//
 
-// //percorre todas propriedades
-// for (const propriedade in pessoa) {
-//     console.log(pessoa[propriedade]);
-// }
+let texto = "Olá, Coder";
 
-// //exemplo 10
-// class Carro {
-//     constructor(marca,ano,cor){
-//         this.marca = marca;
-//         this.ano = ano;
-//         this.cor = cor;
-//     }
-//     apresentar(){
-//         let idade = 2023 - this.ano;
-//         console.log("O "+this.marca+" é "+this.cor+" e tem "+idade+" anos")
-//     }
-// }
+//Propriedade: comprimento do texto.
+console.log(texto.length);
+//Método: Converter minúscula.
+console.log(texto.toLowerCase());
+//Método: Converter maiúscula.
+console.log(texto.toUpperCase());
 
-// const meuCarro = new Carro("Ford",2014,"vermelho");
-// meuCarro.apresentar();
+const pessoa = {
+    nome:"Mariana",
+    idade: 25
+};
+
+//retorna true
+console.log("nome" in pessoa);
+//retorna false
+console.log("origem" in pessoa);
+
+const pessoa = {
+    nome:"Mariana",
+    idade: 25    
+};
+
+//percorre todas propriedades
+for (const propriedade in pessoa) {
+    console.log(pessoa[propriedade]);
+}
+
+//------------------------------------------------//
+
+class Carro {
+    constructor(marca,ano,cor){
+        this.marca = marca;
+        this.ano = ano;
+        this.cor = cor;
+    }
+    apresentar(){
+        let idade = 2023 - this.ano;
+        console.log("O "+this.marca+" é "+this.cor+" e tem "+idade+" anos")
+    }
+}
+
+const meuCarro = new Carro("Ford",2014,"vermelho");
+meuCarro.apresentar();
+
+//------------------------------------------------//
